@@ -31,16 +31,19 @@ mi-proyecto/
 Estos archivos establecen las reglas de juego y el contexto de negocio. Deben crearse al inicializar el framework.
 
 ### `openspec/config.yaml`
-*   **Rol:** El cerebro normativo del framework.
-*   **Contenido:** Define el stack tecnológico, patrones arquitectónicos obligatorios, reglas de testing y restricciones estrictas de código (ej: "las funciones no deben superar las 30 líneas").
+
+* **Rol:** El cerebro normativo del framework.
+* **Contenido:** Define el stack tecnológico, patrones arquitectónicos obligatorios, reglas de testing y restricciones estrictas de código (ej: "las funciones no deben superar las 30 líneas").
 
 ### `openspec/specs/project.md`
-*   **Rol:** Documento raíz de negocio.
-*   **Contenido:** Descripción general de la plataforma, objetivos comerciales, perfiles de usuario (personas) y alcance del software.
+
+* **Rol:** Documento raíz de negocio.
+* **Contenido:** Descripción general de la plataforma, objetivos comerciales, perfiles de usuario (personas) y alcance del software.
 
 ### `.cursorrules` / `CLAUDE.md` / `AGENTS.md`
-*   **Rol:** Configuración del entorno del Agente.
-*   **Contenido:** Instrucciones de sistema para el LLM. Indica qué herramientas usar, flujos de Git requeridos y cómo interpretar los comandos de OpenSpec.
+
+* **Rol:** Configuración del entorno del Agente.
+* **Contenido:** Instrucciones de sistema para el LLM. Indica qué herramientas usar, flujos de Git requeridos y cómo interpretar los comandos de OpenSpec.
 
 ---
 
@@ -49,29 +52,44 @@ Estos archivos establecen las reglas de juego y el contexto de negocio. Deben cr
 Archivos operativos creados dinámicamente dentro de `openspec/changes/<nombre-caracteristica>/` para planificar una nueva funcionalidad antes de programar.
 
 ### `proposal.md`
-*   **Rol:** Alineación conceptual y de negocio.
-*   **Contenido:** Redactado por la IA. Explica qué problema resuelve la nueva funcionalidad, por qué es necesaria y los criterios de aceptación generales.
+
+* **Rol:** Alineación conceptual y de negocio.
+* **Contenido:** Redactado por la IA. Explica qué problema resuelve la nueva funcionalidad, por qué es necesaria y los criterios de aceptación generales.
 
 ### `design.md`
-*   **Rol:** Plan arquitectónico.
-*   **Contenido:** Cambios detallados en bases de datos (esquemas), endpoints de API, diseño de componentes de UI y dependencias técnicas de la solución.
+
+* **Rol:** Plan arquitectónico.
+* **Contenido:** Cambios detallados en bases de datos (esquemas), endpoints de API, diseño de componentes de UI y dependencias técnicas de la solución.
 
 ### `tasks.md`
-*   **Rol:** Hoja de ruta para el desarrollo.
-*   **Contenido:** Lista estrictamente secuencial e individual de tareas técnicas. El agente utilizará este archivo como guía obligatoria para codificar paso a paso con `/opsx:apply`.
+
+* **Rol:** Hoja de ruta para el desarrollo.
+* **Contenido:** Lista estrictamente secuencial e individual de tareas técnicas. El agente utilizará este archivo como guía obligatoria para codificar paso a paso con `/opsx:apply`.
 
 ### Delta Specs (`*_delta.md`)
-*   **Rol:** Requerimientos técnicos temporales.
-*   **Contenido:** Escenarios en formato Gherkin (`Dado / Cuando / Entonces`) o Markdown que describen los nuevos comportamientos esperados del sistema para este cambio específico.
+
+* **Rol:** Requerimientos técnicos temporales.
+* **Contenido:** Escenarios en formato Gherkin (`Dado / Cuando / Entonces`) o Markdown que describen los nuevos comportamientos esperados del sistema para este cambio específico.
 
 ---
 
 ## 🗄️ 3. Directorios de Almacenamiento y Ciclo de Vida
 
 ### `openspec/specs/`
-*   **Rol:** Documentación activa.
-*   **Contenido:** Contiene las especificaciones consolidadas y vigentes del sistema. Cuando un cambio se aprueba, sus *Delta Specs* se fusionan automáticamente aquí.
+
+* **Rol:** Documentación activa.
+* **Contenido:** Contiene las especificaciones consolidadas y vigentes del sistema. Cuando un cambio se aprueba, sus *Delta Specs* se fusionan automáticamente aquí.
 
 ### `openspec/archive/`
-*   **Rol:** Auditoría histórica.
-*   **Contenido:** Una vez completado un desarrollo con `/opsx:archive`, la carpeta entera del cambio dentro de `changes/` se traslada aquí para mantener el repositorio limpio.
+
+* **Rol:** Auditoría histórica.
+* **Contenido:** Una vez completado un desarrollo con `/opsx:archive`, la carpeta entera del cambio dentro de `changes/` se traslada aquí para mantener el repositorio limpio.
+
+
+echo "# GesFin" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/drojaslopez/GesFin.git
+git push -u origin main
