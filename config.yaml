@@ -1,0 +1,24 @@
+project:
+  name: "Gestión Financiera Familiar"
+  version: "1.0.0"
+  language: "es"
+
+stack:
+  architecture: "Hexagonal Architecture / DDD"
+  backend:
+    framework: "Java / Spring Boot"
+    persistence: "JPA / Hibernate"
+    database: "PostgreSQL (Local) / Supabase (Futuro)"
+  frontend_web:
+    framework: "React"
+  frontend_mobile:
+    framework: "Flutter"
+
+rules:
+  coding_standards:
+    - "Respetar el aislamiento de las capas de Dominio, Aplicación y Adaptadores."
+    - "Las entidades de dominio no deben depender de frameworks ni anotaciones de persistencia."
+    - "Escribir código limpio y documentado en español."
+  testing:
+    - "Pruebas unitarias para la lógica de negocio en el Dominio."
+    - "Pruebas de integración con base de datos H2/Testcontainers para Adaptadores."
