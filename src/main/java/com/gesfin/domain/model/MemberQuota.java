@@ -1,7 +1,6 @@
 package com.gesfin.domain.model;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public class MemberQuota {
 
