@@ -1,7 +1,6 @@
 package com.gesfin.adapters.in.rest.dto.read;
 
 import com.gesfin.domain.model.FamilyGroup;
-import com.gesfin.domain.model.User;
 
 import java.util.List;
 

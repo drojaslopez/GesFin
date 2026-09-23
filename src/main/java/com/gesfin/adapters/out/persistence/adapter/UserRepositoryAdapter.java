@@ -1,6 +1,4 @@
 package com.gesfin.adapters.out.persistence.adapter;
-
-import com.gesfin.adapters.out.persistence.entity.UserJpaEntity;
 import com.gesfin.adapters.out.persistence.mapper.UserEntityMapper;
 import com.gesfin.adapters.out.persistence.repository.UserJpaRepository;
 import com.gesfin.domain.model.User;

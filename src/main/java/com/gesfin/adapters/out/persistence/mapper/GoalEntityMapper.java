@@ -19,6 +19,7 @@ public interface GoalEntityMapper {
     @Mapping(target = "cuotas", source = "cuotas")
     Goal toDomain(GoalJpaEntity entity);
 
+    @Mapping(target = "id", ignore = true)
     MemberQuotaJpaEntity toQuotaEntity(MemberQuota domain);
 
     MemberQuota toQuotaDomain(MemberQuotaJpaEntity entity);
