@@ -1,14 +1,35 @@
 services:
+  gesfin-app:
+    build: .
+    container_name: gesfin-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://gesfin-db:5432/gesfin
+      - SPRING_DATASOURCE_USERNAME=gesfin_user
+      - SPRING_DATASOURCE_PASSWORD=gesfin_pass
+    depends_on:
+      - gesfin-db
+    networks:
+      - gesfin-network
+
   gesfin-db:
     image: postgres:16-alpine
     container_name: gesfin-db
     restart: unless-stopped
-    ports:
-      - "5433:5432"
-    env_file:
-      - .env
+    environment:
+      - POSTGRES_DB=gesfin
+      - POSTGRES_USER=gesfin_user
+      - POSTGRES_PASSWORD=gesfin_pass
     volumes:
       - gesfin-data:/var/lib/postgresql/data
+    networks:
+      - gesfin-network
 
 volumes:
   gesfin-data:
+
+networks:
+  gesfin-network:
+    driver: bridge
