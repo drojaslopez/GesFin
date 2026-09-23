@@ -11,6 +11,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+
+import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,5 +51,29 @@ public class UserQueryController {
             @PathVariable Long id) {
         User user = userQueryService.buscar(id);
         return ResponseEntity.ok(UserReadDto.from(user));
+    }
+
+    @GetMapping("/")
+    @Operation(
+            summary = "Consultar los usuarios",
+            description = "Devuelve la lista de todos los usuarios: nombre, email, rol y grupo familiar al que pertenece.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Usuarios encontrados",
+                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserReadDto.class),
+                            examples = @ExampleObject(value = """
+                                    {
+                                      "id": 1,
+                                      "nombre": "Daniel Pérez",
+                                      "email": "daniel@gesfin.com",
+                                      "rol": "ADMINISTRADOR",
+                                      "familyGroupId": 1
+                                    }
+                                    """))),
+            @ApiResponse(responseCode = "400", description = "Usuarios no encontrados",
+                    content = @Content(mediaType = "application/json"))
+    })
+    public ResponseEntity<List<UserReadDto>> listarTodos(){
+        List<User> users = userQueryService.listarTodos();
+        return ResponseEntity.ok(UserReadDto.from(users));
     }
 }

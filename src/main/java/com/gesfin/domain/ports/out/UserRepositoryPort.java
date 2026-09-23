@@ -12,4 +12,5 @@ public interface UserRepositoryPort {
     Optional<User> buscarPorEmail(String email);
     List<User> buscarPorFamilyGroupId(Long familyGroupId);
     void eliminar(Long id);
+    List<User> listarTodos();
 }

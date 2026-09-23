@@ -37,11 +37,20 @@ public class UserRepositoryAdapter implements UserRepositoryPort {
 
     @Override
     public List<User> buscarPorFamilyGroupId(Long familyGroupId) {
-        throw new UnsupportedOperationException("No implementado aún");
+        return jpaRepository.findByFamilyGroupId(familyGroupId).stream()
+                .map(mapper::toDomain)
+                .collect(java.util.stream.Collectors.toList());
     }
 
     @Override
     public void eliminar(Long id) {
         jpaRepository.deleteById(id);
+    }
+
+    @Override
+    public List<User> listarTodos() {
+        return jpaRepository.findAll().stream()
+                .map(mapper::toDomain)
+                .collect(java.util.stream.Collectors.toList());
     }
 }
