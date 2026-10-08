@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".GesfinWidgetApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GesFinGastoWidget"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GesFinGastoWidget">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity para registrar gasto (BottomSheet/Compacto) -->
+        <activity
+            android:name=".ui.gasto.RegistrarGastoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GesFinGastoWidget.Dialog"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Widget Configuration Activity -->
+        <activity
+            android:name=".ui.widget.config.WidgetConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GesFinGastoWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Widget Receiver -->
+        <receiver
+            android:name=".ui.widget.GesfinGastoWidgetReceiver"
+            android:exported="true"
+            android:label="@string/widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/gesfin_gasto_widget_info" />
+        </receiver>
+
+    </application>
+
+</manifest>

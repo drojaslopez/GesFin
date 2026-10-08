@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="anadir_gasto">Añadir Gasto</string>
+    <string name="app_name">GesFin Gasto Widget</string>
+    <string name="cambiar_fecha">Cambiar fecha</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="concepto">Concepto</string>
+    <string name="error_campos_obligatorios">Los campos marcados con * son obligatorios</string>
+    <string name="error_monto_invalido">El monto debe ser mayor a 0</string>
+    <string name="error_sesion_no_iniciada">Debes iniciar sesión para registrar gastos</string>
+    <string name="fecha">Fecha</string>
+    <string name="gasto_registrado_correctamente">Gasto registrado correctamente</string>
+    <string name="grupo_familiar">Grupo familiar: %1$s</string>
+    <string name="guardar_gasto">Guardar Gasto</string>
+    <string name="monto">Monto (€)</string>
+    <string name="nota">Nota</string>
+    <string name="realizado_por">Realizado por: %1$s</string>
+    <string name="registrar_gasto">Registrar Gasto</string>
+    <string name="widget_description">Widget para registrar gastos rápidamente con la cuenta logueada</string>
+    <string name="widget_label">Registrar Gasto</string>
+    <style name="Theme.GesFinGastoWidget" parent="android:Theme.Material.Light.NoActionBar"/>
+    <style name="Theme.GesFinGastoWidget.Dialog" parent="android:Theme.Material.Light.Dialog.MinWidth">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

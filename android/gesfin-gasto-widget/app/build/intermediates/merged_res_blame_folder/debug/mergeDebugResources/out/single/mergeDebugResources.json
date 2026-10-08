@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/xml_gesfin_gasto_widget_info.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/xml/gesfin_gasto_widget_info.xml"
+    },
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/xml_backup_rules.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.gesfin.widget.app-debug-59:/xml_data_extraction_rules.xml.flat",
+        "source": "com.gesfin.widget.app-main-61:/xml/data_extraction_rules.xml"
+    }
+]

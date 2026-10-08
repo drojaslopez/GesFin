@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+mipmap ic_launcher
+mipmap ic_launcher_round
+string anadir_gasto
+string app_name
+string cambiar_fecha
+string cancelar
+string concepto
+string error_campos_obligatorios
+string error_monto_invalido
+string error_sesion_no_iniciada
+string fecha
+string gasto_registrado_correctamente
+string grupo_familiar
+string guardar_gasto
+string monto
+string nota
+string realizado_por
+string registrar_gasto
+string widget_description
+string widget_label
+style Theme.GesFinGastoWidget
+style Theme.GesFinGastoWidget.Dialog
+xml backup_rules
+xml data_extraction_rules
+xml gesfin_gasto_widget_info
